@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C60B930225516443007FC5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B930125516443007FC5FC /* AppDelegate.swift */; };
+		C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B930325516443007FC5FC /* SceneDelegate.swift */; };
+		C60B930625516443007FC5FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B930525516443007FC5FC /* ViewController.swift */; };
+		C60B930925516443007FC5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60B930725516443007FC5FC /* Main.storyboard */; };
+		C60B930C25516443007FC5FC /* Climata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C60B930A25516443007FC5FC /* Climata.xcdatamodeld */; };
+		C60B930E25516447007FC5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60B930D25516447007FC5FC /* Assets.xcassets */; };
+		C60B931125516447007FC5FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60B930F25516447007FC5FC /* LaunchScreen.storyboard */; };
+		C60B931C25516447007FC5FC /* ClimataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B931B25516447007FC5FC /* ClimataTests.swift */; };
+		C60B932725516447007FC5FC /* ClimataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B932625516447007FC5FC /* ClimataUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C60B931825516447007FC5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C60B92F625516443007FC5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C60B92FD25516443007FC5FC;
+			remoteInfo = Climata;
+		};
+		C60B932325516447007FC5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C60B92F625516443007FC5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C60B92FD25516443007FC5FC;
+			remoteInfo = Climata;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C60B92FE25516443007FC5FC /* Climata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Climata.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60B930125516443007FC5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C60B930325516443007FC5FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C60B930525516443007FC5FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C60B930825516443007FC5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C60B930B25516443007FC5FC /* Climata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Climata.xcdatamodel; sourceTree = "<group>"; };
+		C60B930D25516447007FC5FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C60B931025516447007FC5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C60B931225516447007FC5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60B931725516447007FC5FC /* ClimataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60B931B25516447007FC5FC /* ClimataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimataTests.swift; sourceTree = "<group>"; };
+		C60B931D25516447007FC5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60B932225516447007FC5FC /* ClimataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60B932625516447007FC5FC /* ClimataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimataUITests.swift; sourceTree = "<group>"; };
+		C60B932825516447007FC5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C60B92FB25516443007FC5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60B931425516447007FC5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60B931F25516447007FC5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C60B92F525516443007FC5FC = {
+			isa = PBXGroup;
+			children = (
+				C60B930025516443007FC5FC /* Climata */,
+				C60B931A25516447007FC5FC /* ClimataTests */,
+				C60B932525516447007FC5FC /* ClimataUITests */,
+				C60B92FF25516443007FC5FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C60B92FF25516443007FC5FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C60B92FE25516443007FC5FC /* Climata.app */,
+				C60B931725516447007FC5FC /* ClimataTests.xctest */,
+				C60B932225516447007FC5FC /* ClimataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C60B930025516443007FC5FC /* Climata */ = {
+			isa = PBXGroup;
+			children = (
+				C60B930125516443007FC5FC /* AppDelegate.swift */,
+				C60B930325516443007FC5FC /* SceneDelegate.swift */,
+				C60B930525516443007FC5FC /* ViewController.swift */,
+				C60B930725516443007FC5FC /* Main.storyboard */,
+				C60B930D25516447007FC5FC /* Assets.xcassets */,
+				C60B930F25516447007FC5FC /* LaunchScreen.storyboard */,
+				C60B931225516447007FC5FC /* Info.plist */,
+				C60B930A25516443007FC5FC /* Climata.xcdatamodeld */,
+			);
+			path = Climata;
+			sourceTree = "<group>";
+		};
+		C60B931A25516447007FC5FC /* ClimataTests */ = {
+			isa = PBXGroup;
+			children = (
+				C60B931B25516447007FC5FC /* ClimataTests.swift */,
+				C60B931D25516447007FC5FC /* Info.plist */,
+			);
+			path = ClimataTests;
+			sourceTree = "<group>";
+		};
+		C60B932525516447007FC5FC /* ClimataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C60B932625516447007FC5FC /* ClimataUITests.swift */,
+				C60B932825516447007FC5FC /* Info.plist */,
+			);
+			path = ClimataUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C60B92FD25516443007FC5FC /* Climata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C60B932B25516447007FC5FC /* Build configuration list for PBXNativeTarget "Climata" */;
+			buildPhases = (
+				C60B92FA25516443007FC5FC /* Sources */,
+				C60B92FB25516443007FC5FC /* Frameworks */,
+				C60B92FC25516443007FC5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Climata;
+			productName = Climata;
+			productReference = C60B92FE25516443007FC5FC /* Climata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C60B931625516447007FC5FC /* ClimataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C60B932E25516447007FC5FC /* Build configuration list for PBXNativeTarget "ClimataTests" */;
+			buildPhases = (
+				C60B931325516447007FC5FC /* Sources */,
+				C60B931425516447007FC5FC /* Frameworks */,
+				C60B931525516447007FC5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C60B931925516447007FC5FC /* PBXTargetDependency */,
+			);
+			name = ClimataTests;
+			productName = ClimataTests;
+			productReference = C60B931725516447007FC5FC /* ClimataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C60B932125516447007FC5FC /* ClimataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C60B933125516447007FC5FC /* Build configuration list for PBXNativeTarget "ClimataUITests" */;
+			buildPhases = (
+				C60B931E25516447007FC5FC /* Sources */,
+				C60B931F25516447007FC5FC /* Frameworks */,
+				C60B932025516447007FC5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C60B932425516447007FC5FC /* PBXTargetDependency */,
+			);
+			name = ClimataUITests;
+			productName = ClimataUITests;
+			productReference = C60B932225516447007FC5FC /* ClimataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C60B92F625516443007FC5FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = Julius;
+				TargetAttributes = {
+					C60B92FD25516443007FC5FC = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					C60B931625516447007FC5FC = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = C60B92FD25516443007FC5FC;
+					};
+					C60B932125516447007FC5FC = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = C60B92FD25516443007FC5FC;
+					};
+				};
+			};
+			buildConfigurationList = C60B92F925516443007FC5FC /* Build configuration list for PBXProject "Climata" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C60B92F525516443007FC5FC;
+			productRefGroup = C60B92FF25516443007FC5FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C60B92FD25516443007FC5FC /* Climata */,
+				C60B931625516447007FC5FC /* ClimataTests */,
+				C60B932125516447007FC5FC /* ClimataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C60B92FC25516443007FC5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60B931125516447007FC5FC /* LaunchScreen.storyboard in Resources */,
+				C60B930E25516447007FC5FC /* Assets.xcassets in Resources */,
+				C60B930925516443007FC5FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60B931525516447007FC5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60B932025516447007FC5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C60B92FA25516443007FC5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60B930625516443007FC5FC /* ViewController.swift in Sources */,
+				C60B930225516443007FC5FC /* AppDelegate.swift in Sources */,
+				C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */,
+				C60B930C25516443007FC5FC /* Climata.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60B931325516447007FC5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60B931C25516447007FC5FC /* ClimataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C60B931E25516447007FC5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C60B932725516447007FC5FC /* ClimataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C60B931925516447007FC5FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C60B92FD25516443007FC5FC /* Climata */;
+			targetProxy = C60B931825516447007FC5FC /* PBXContainerItemProxy */;
+		};
+		C60B932425516447007FC5FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C60B92FD25516443007FC5FC /* Climata */;
+			targetProxy = C60B932325516447007FC5FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C60B930725516443007FC5FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C60B930825516443007FC5FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C60B930F25516447007FC5FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C60B931025516447007FC5FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C60B932925516447007FC5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C60B932A25516447007FC5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C60B932C25516447007FC5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR7JKZZ273;
+				INFOPLIST_FILE = Climata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gtsofa.com.Climata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C60B932D25516447007FC5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR7JKZZ273;
+				INFOPLIST_FILE = Climata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gtsofa.com.Climata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C60B932F25516447007FC5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR7JKZZ273;
+				INFOPLIST_FILE = ClimataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gtsofa.com.ClimataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Climata.app/Climata";
+			};
+			name = Debug;
+		};
+		C60B933025516447007FC5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR7JKZZ273;
+				INFOPLIST_FILE = ClimataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gtsofa.com.ClimataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Climata.app/Climata";
+			};
+			name = Release;
+		};
+		C60B933225516447007FC5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR7JKZZ273;
+				INFOPLIST_FILE = ClimataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gtsofa.com.ClimataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Climata;
+			};
+			name = Debug;
+		};
+		C60B933325516447007FC5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DR7JKZZ273;
+				INFOPLIST_FILE = ClimataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gtsofa.com.ClimataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Climata;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C60B92F925516443007FC5FC /* Build configuration list for PBXProject "Climata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C60B932925516447007FC5FC /* Debug */,
+				C60B932A25516447007FC5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C60B932B25516447007FC5FC /* Build configuration list for PBXNativeTarget "Climata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C60B932C25516447007FC5FC /* Debug */,
+				C60B932D25516447007FC5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C60B932E25516447007FC5FC /* Build configuration list for PBXNativeTarget "ClimataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C60B932F25516447007FC5FC /* Debug */,
+				C60B933025516447007FC5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C60B933125516447007FC5FC /* Build configuration list for PBXNativeTarget "ClimataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C60B933225516447007FC5FC /* Debug */,
+				C60B933325516447007FC5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C60B930A25516443007FC5FC /* Climata.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C60B930B25516443007FC5FC /* Climata.xcdatamodel */,
+			);
+			currentVersion = C60B930B25516443007FC5FC /* Climata.xcdatamodel */;
+			path = Climata.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C60B92F625516443007FC5FC /* Project object */;
+}
