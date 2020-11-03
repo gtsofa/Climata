@@ -10,12 +10,12 @@
 		C60B930225516443007FC5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B930125516443007FC5FC /* AppDelegate.swift */; };
 		C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B930325516443007FC5FC /* SceneDelegate.swift */; };
 		C60B930625516443007FC5FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B930525516443007FC5FC /* ViewController.swift */; };
-		C60B930925516443007FC5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60B930725516443007FC5FC /* Main.storyboard */; };
 		C60B930C25516443007FC5FC /* Climata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C60B930A25516443007FC5FC /* Climata.xcdatamodeld */; };
 		C60B930E25516447007FC5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60B930D25516447007FC5FC /* Assets.xcassets */; };
 		C60B931125516447007FC5FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60B930F25516447007FC5FC /* LaunchScreen.storyboard */; };
 		C60B931C25516447007FC5FC /* ClimataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B931B25516447007FC5FC /* ClimataTests.swift */; };
 		C60B932725516447007FC5FC /* ClimataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B932625516447007FC5FC /* ClimataUITests.swift */; };
+		C60B933625516522007FC5FC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B933525516522007FC5FC /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		C60B930125516443007FC5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C60B930325516443007FC5FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C60B930525516443007FC5FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C60B930825516443007FC5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C60B930B25516443007FC5FC /* Climata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Climata.xcdatamodel; sourceTree = "<group>"; };
 		C60B930D25516447007FC5FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60B931025516447007FC5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		C60B932225516447007FC5FC /* ClimataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60B932625516447007FC5FC /* ClimataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimataUITests.swift; sourceTree = "<group>"; };
 		C60B932825516447007FC5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60B933525516522007FC5FC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,12 @@
 		C60B930025516443007FC5FC /* Climata */ = {
 			isa = PBXGroup;
 			children = (
+				C60B933825516599007FC5FC /* Model */,
+				C60B93372551658C007FC5FC /* View */,
+				C60B93342551650F007FC5FC /* Controller */,
 				C60B930125516443007FC5FC /* AppDelegate.swift */,
 				C60B930325516443007FC5FC /* SceneDelegate.swift */,
 				C60B930525516443007FC5FC /* ViewController.swift */,
-				C60B930725516443007FC5FC /* Main.storyboard */,
 				C60B930D25516447007FC5FC /* Assets.xcassets */,
 				C60B930F25516447007FC5FC /* LaunchScreen.storyboard */,
 				C60B931225516447007FC5FC /* Info.plist */,
@@ -129,6 +131,30 @@
 				C60B932825516447007FC5FC /* Info.plist */,
 			);
 			path = ClimataUITests;
+			sourceTree = "<group>";
+		};
+		C60B93342551650F007FC5FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C60B933525516522007FC5FC /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C60B93372551658C007FC5FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C60B933825516599007FC5FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +263,6 @@
 			files = (
 				C60B931125516447007FC5FC /* LaunchScreen.storyboard in Resources */,
 				C60B930E25516447007FC5FC /* Assets.xcassets in Resources */,
-				C60B930925516443007FC5FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +291,7 @@
 				C60B930225516443007FC5FC /* AppDelegate.swift in Sources */,
 				C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */,
 				C60B930C25516443007FC5FC /* Climata.xcdatamodeld in Sources */,
+				C60B933625516522007FC5FC /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +327,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C60B930725516443007FC5FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C60B930825516443007FC5FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C60B930F25516447007FC5FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
