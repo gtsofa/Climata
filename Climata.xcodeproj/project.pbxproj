@@ -16,6 +16,7 @@
 		C60B931C25516447007FC5FC /* ClimataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B931B25516447007FC5FC /* ClimataTests.swift */; };
 		C60B932725516447007FC5FC /* ClimataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B932625516447007FC5FC /* ClimataUITests.swift */; };
 		C60B933625516522007FC5FC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B933525516522007FC5FC /* HomeController.swift */; };
+		C60B933B25516842007FC5FC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B933A25516842007FC5FC /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C60B932625516447007FC5FC /* ClimataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimataUITests.swift; sourceTree = "<group>"; };
 		C60B932825516447007FC5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C60B933525516522007FC5FC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		C60B933A25516842007FC5FC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		C60B930025516443007FC5FC /* Climata */ = {
 			isa = PBXGroup;
 			children = (
+				C60B933925516821007FC5FC /* Utils */,
 				C60B933825516599007FC5FC /* Model */,
 				C60B93372551658C007FC5FC /* View */,
 				C60B93342551650F007FC5FC /* Controller */,
@@ -155,6 +158,14 @@
 			);
 			name = Model;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C60B933925516821007FC5FC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C60B933A25516842007FC5FC /* Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				C60B930625516443007FC5FC /* ViewController.swift in Sources */,
 				C60B930225516443007FC5FC /* AppDelegate.swift in Sources */,
 				C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */,
+				C60B933B25516842007FC5FC /* Extension.swift in Sources */,
 				C60B930C25516443007FC5FC /* Climata.xcdatamodeld in Sources */,
 				C60B933625516522007FC5FC /* HomeController.swift in Sources */,
 			);
