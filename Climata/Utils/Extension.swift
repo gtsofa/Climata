@@ -21,6 +21,8 @@ extension UIColor {
     static let porcelain = UIColor.rgb(red: 225, green: 221, blue: 217)//225    221    217 //#ffcccc
     static let primaryColor = UIColor.rgb(red: 255, green: 204, blue: 204)//255, 204, 204
     static let backgroundColor = UIColor.rgb(red: 25, green: 25, blue: 25)
+    static let primaryBlue = UIColor.rgb(red: 73, green: 159, blue: 245)
+    
     
 }
 
