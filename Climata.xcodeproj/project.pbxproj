@@ -17,6 +17,10 @@
 		C60B932725516447007FC5FC /* ClimataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B932625516447007FC5FC /* ClimataUITests.swift */; };
 		C60B933625516522007FC5FC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B933525516522007FC5FC /* HomeController.swift */; };
 		C60B933B25516842007FC5FC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B933A25516842007FC5FC /* Extension.swift */; };
+		C60B933E25527880007FC5FC /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B933D25527880007FC5FC /* ContainerController.swift */; };
+		C60B934025527894007FC5FC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B933F25527894007FC5FC /* MenuController.swift */; };
+		C60B934225527BA8007FC5FC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934125527BA8007FC5FC /* Protocols.swift */; };
+		C60B934425528813007FC5FC /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934325528813007FC5FC /* MenuOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		C60B932825516447007FC5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C60B933525516522007FC5FC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C60B933A25516842007FC5FC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C60B933D25527880007FC5FC /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
+		C60B933F25527894007FC5FC /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		C60B934125527BA8007FC5FC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		C60B934325528813007FC5FC /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 		C60B93342551650F007FC5FC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C60B933C2552783B007FC5FC /* SideMenu */,
 				C60B933525516522007FC5FC /* HomeController.swift */,
 			);
 			path = Controller;
@@ -155,6 +164,7 @@
 		C60B933825516599007FC5FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C60B934325528813007FC5FC /* MenuOption.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -164,8 +174,18 @@
 			isa = PBXGroup;
 			children = (
 				C60B933A25516842007FC5FC /* Extension.swift */,
+				C60B934125527BA8007FC5FC /* Protocols.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C60B933C2552783B007FC5FC /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C60B933D25527880007FC5FC /* ContainerController.swift */,
+				C60B933F25527894007FC5FC /* MenuController.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +318,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60B934025527894007FC5FC /* MenuController.swift in Sources */,
 				C60B930625516443007FC5FC /* ViewController.swift in Sources */,
 				C60B930225516443007FC5FC /* AppDelegate.swift in Sources */,
+				C60B934425528813007FC5FC /* MenuOption.swift in Sources */,
+				C60B934225527BA8007FC5FC /* Protocols.swift in Sources */,
 				C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */,
 				C60B933B25516842007FC5FC /* Extension.swift in Sources */,
+				C60B933E25527880007FC5FC /* ContainerController.swift in Sources */,
 				C60B930C25516443007FC5FC /* Climata.xcdatamodeld in Sources */,
 				C60B933625516522007FC5FC /* HomeController.swift in Sources */,
 			);
