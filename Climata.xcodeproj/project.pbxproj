@@ -22,6 +22,10 @@
 		C60B934225527BA8007FC5FC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934125527BA8007FC5FC /* Protocols.swift */; };
 		C60B934425528813007FC5FC /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934325528813007FC5FC /* MenuOption.swift */; };
 		C60B93462552C519007FC5FC /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B93452552C519007FC5FC /* MenuOptionCell.swift */; };
+		C60B93482552EFF1007FC5FC /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B93472552EFF1007FC5FC /* TestController.swift */; };
+		C60B934A2552F897007FC5FC /* PreviousLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B93492552F896007FC5FC /* PreviousLocationController.swift */; };
+		C60B934C2552FBB8007FC5FC /* PreviousLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934B2552FBB8007FC5FC /* PreviousLocationCell.swift */; };
+		C60B934E25532C6A007FC5FC /* CityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934D25532C69007FC5FC /* CityController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		C60B934125527BA8007FC5FC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		C60B934325528813007FC5FC /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
 		C60B93452552C519007FC5FC /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
+		C60B93472552EFF1007FC5FC /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		C60B93492552F896007FC5FC /* PreviousLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLocationController.swift; sourceTree = "<group>"; };
+		C60B934B2552FBB8007FC5FC /* PreviousLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLocationCell.swift; sourceTree = "<group>"; };
+		C60B934D25532C69007FC5FC /* CityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,9 @@
 			children = (
 				C60B933C2552783B007FC5FC /* SideMenu */,
 				C60B933525516522007FC5FC /* HomeController.swift */,
+				C60B93472552EFF1007FC5FC /* TestController.swift */,
+				C60B93492552F896007FC5FC /* PreviousLocationController.swift */,
+				C60B934D25532C69007FC5FC /* CityController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C60B93452552C519007FC5FC /* MenuOptionCell.swift */,
+				C60B934B2552FBB8007FC5FC /* PreviousLocationCell.swift */,
 			);
 			name = View;
 			path = "New Group";
@@ -322,13 +334,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60B934025527894007FC5FC /* MenuController.swift in Sources */,
+				C60B934C2552FBB8007FC5FC /* PreviousLocationCell.swift in Sources */,
 				C60B93462552C519007FC5FC /* MenuOptionCell.swift in Sources */,
+				C60B934E25532C6A007FC5FC /* CityController.swift in Sources */,
 				C60B930625516443007FC5FC /* ViewController.swift in Sources */,
+				C60B93482552EFF1007FC5FC /* TestController.swift in Sources */,
 				C60B930225516443007FC5FC /* AppDelegate.swift in Sources */,
 				C60B934425528813007FC5FC /* MenuOption.swift in Sources */,
 				C60B934225527BA8007FC5FC /* Protocols.swift in Sources */,
 				C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */,
 				C60B933B25516842007FC5FC /* Extension.swift in Sources */,
+				C60B934A2552F897007FC5FC /* PreviousLocationController.swift in Sources */,
 				C60B933E25527880007FC5FC /* ContainerController.swift in Sources */,
 				C60B930C25516443007FC5FC /* Climata.xcdatamodeld in Sources */,
 				C60B933625516522007FC5FC /* HomeController.swift in Sources */,
