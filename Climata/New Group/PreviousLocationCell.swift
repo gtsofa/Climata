@@ -28,8 +28,6 @@ class PreviousLocationCell: UITableViewCell {
     //MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        backgroundColor = .darkGray
-//        selectionStyle = .none
         addSubview(menuIconImageView)
         addSubview(descriptionLabel)
         menuIconImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,9 +37,6 @@ class PreviousLocationCell: UITableViewCell {
         menuIconImageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
         descriptionLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         descriptionLabel.leftAnchor.constraint(equalTo: menuIconImageView.rightAnchor, constant: 12).isActive = true
-        
-        
-        
     }
     
     required init?(coder: NSCoder) {

@@ -60,9 +60,11 @@ class HomeController: UIViewController {
     }
     //MARK: - Handlers
     func configureNavigationBar() {
-        view.backgroundColor = .white
-        navigationController?.navigationBar.barTintColor = .primaryBlue
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        //view.backgroundColor = .white
+        assignbackground()
+//        navigationController?.navigationBar.barTintColor = .white
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         title = "CLIMATA"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu-icon-1").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
     }
@@ -89,12 +91,13 @@ class HomeController: UIViewController {
     func addSegmentedControl() {
         let segmentItems = ["Previous Locations", "Add New Location"]
         control = UISegmentedControl(items: segmentItems)
-        control.backgroundColor = .white
+        //control.backgroundColor = .white
         control.layer.borderWidth = 1.0
         control.layer.cornerRadius = 5.0
         control.layer.borderColor = UIColor.white.cgColor
         control.layer.masksToBounds = false
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.darkGray], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         control.selectedSegmentIndex = 0
         control.frame = CGRect(x: 10, y: 250, width: (self.view.frame.width - 20), height: 50)
          control.addTarget(self, action: #selector(tapSegmented), for: .valueChanged)
@@ -131,6 +134,19 @@ class HomeController: UIViewController {
         previousLocationVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         previousLocationVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         previousLocationVC.view.heightAnchor.constraint(equalToConstant: 300).isActive = true
+    }
+    
+    func assignbackground(){
+        let background = UIImage(named: "bg-15")
+
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
     }
     
     

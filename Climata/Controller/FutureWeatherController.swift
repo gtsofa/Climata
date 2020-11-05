@@ -1,14 +1,14 @@
 //
-//  PreviousLocationController.swift
+//  FutureWeatherController.swift
 //  Climata
 //
-//  Created by Julius on 04/11/2020.
+//  Created by Julius on 05/11/2020.
 //  Copyright © 2020 Julius. All rights reserved.
 //
 
 import UIKit
 
-class PreviousLocationController: UIViewController {
+class FutureWeatherController: UIViewController {
     //MARK: - Properties
     var testArray = ["Los Angeles", "Watamu, Kenya", "Mwiki, Kenya", "Machakos, Kenya", "Nairobi, Kenya"]
     fileprivate let cellId = "previous table cell"
@@ -40,7 +40,7 @@ class PreviousLocationController: UIViewController {
 }
 
 //MARK: - TableView Delegates & DataSource
-extension PreviousLocationController: UITableViewDelegate, UITableViewDataSource {
+extension FutureWeatherController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testArray.count
     }
