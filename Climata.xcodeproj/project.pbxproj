@@ -29,6 +29,7 @@
 		C60B9350255438D5007FC5FC /* FutureWeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934F255438D5007FC5FC /* FutureWeatherController.swift */; };
 		C60B9352255457D1007FC5FC /* FutureDaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B9351255457D0007FC5FC /* FutureDaysCell.swift */; };
 		C60B935425546A56007FC5FC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B935325546A56007FC5FC /* WeatherManager.swift */; };
+		C65353D32554BB5700A58A0C /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65353D22554BB5700A58A0C /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C60B934F255438D5007FC5FC /* FutureWeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureWeatherController.swift; sourceTree = "<group>"; };
 		C60B9351255457D0007FC5FC /* FutureDaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureDaysCell.swift; sourceTree = "<group>"; };
 		C60B935325546A56007FC5FC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		C65353D22554BB5700A58A0C /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				C60B934325528813007FC5FC /* MenuOption.swift */,
 				C60B935325546A56007FC5FC /* WeatherManager.swift */,
+				C65353D22554BB5700A58A0C /* WeatherData.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65353D32554BB5700A58A0C /* WeatherData.swift in Sources */,
 				C60B934025527894007FC5FC /* MenuController.swift in Sources */,
 				C60B934C2552FBB8007FC5FC /* PreviousLocationCell.swift in Sources */,
 				C60B93462552C519007FC5FC /* MenuOptionCell.swift in Sources */,
