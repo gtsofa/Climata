@@ -8,11 +8,20 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, UITextFieldDelegate{
     //MARK: - Properties
+    private lazy var searchTextField: UITextField = {
+        let mobile = UITextField()
+        mobile.placeholder = "Search location"
+        mobile.setLeftPaddingPoints(10)
+        mobile.backgroundColor = .white
+        mobile.layer.cornerRadius = 10
+        mobile.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        return mobile
+    }()
     weak var delegate: HomeControllerDelegate?
     let searchController = UISearchController(searchResultsController: nil)
-    lazy   var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 150, height: 20))
+    lazy   var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
     var filteredCandies: [String] = [] //[Candy]
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
@@ -23,6 +32,15 @@ class HomeController: UIViewController {
     let firstChild = TestController()
     let previousLocationVC = PreviousLocationController()
     
+    //todo
+    weak var conditionImageView: UIImageView!
+    weak var temperatureLabel: UILabel!
+    weak var cityLabel: UILabel!
+    //weak var searchTextField: UITextField!
+    
+    
+    var weatherManager = WeatherManager()
+    
 
     //MARK: - Initializers
     override func viewDidLoad() {
@@ -31,13 +49,23 @@ class HomeController: UIViewController {
         //setupSearchBar()
         configureSearchBar()
         addSegmentedControl()
-        //firstChildVC()
-        //previousLocationChild()
+        previousLocationChild()
+        searchTextField.delegate = self
+
     }
     //MARK: - Selectors
     @objc func handleMenuToggle() {
         print("menu toggle touched")
         delegate?.handleMenuToggle(forMenuOption: nil)
+    }
+    
+    @objc func shareTapped() {
+        print("menu toggle touched")
+        delegate?.handleMenuToggle(forMenuOption: nil)
+    }
+    
+    @objc func addTapped() {
+        searchTextField.endEditing(true)
     }
     
     @objc func tapSegmented(_ segmentedControl: UISegmentedControl) {
@@ -65,15 +93,25 @@ class HomeController: UIViewController {
 //        navigationController?.navigationBar.barTintColor = .white
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
-        title = "CLIMATA"
+        //title = "CLIMATA"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu-icon-1").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
     }
     
-    func configureSearchBar() {
-        let rightNavBarButton = UIBarButtonItem(customView: searchBar)
-        self.navigationItem.rightBarButtonItem = rightNavBarButton
+    @objc func configureSearchBar() {
+        
+        let rightNavBarButton = UIBarButtonItem(customView: searchTextField)
+        //self.navigationItem.rightBarButtonItem = rightNavBarButton
+        
+        let search = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItems = [search, rightNavBarButton]
+        
         searchBar.placeholder = "location"
+        searchTextField.endEditing(true)
+        
     }
+    
+    
+    //@objc func
     func setupSearchBar() {
         // 1
         searchController.searchResultsUpdater = self
@@ -133,7 +171,11 @@ class HomeController: UIViewController {
         previousLocationVC.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
         previousLocationVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         previousLocationVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        previousLocationVC.view.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        previousLocationVC.view.heightAnchor.constraint(equalToConstant: 500).isActive = true
+        
+        previousLocationVC.view.layer.cornerRadius = 25
+        previousLocationVC.view.layer.masksToBounds = true
+        previousLocationVC.view.backgroundColor = .white
     }
     
     func assignbackground(){
@@ -149,6 +191,27 @@ class HomeController: UIViewController {
         self.view.sendSubviewToBack(imageView)
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
+        searchTextField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        }else {
+            textField.placeholder = "Type something"
+            return true
+        }
+    }
+    
     
     
 }
@@ -157,8 +220,21 @@ extension HomeController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         //TODO:
     }
-    
-    
-    
-    
+ 
 }
+
+//extension HomeController: UITextFieldDelegate {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if let city = searchTextField.text {
+//            weatherManager.fetchWeather(cityName: city)
+//        }
+//        searchTextField.text = ""
+//    }
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        searchTextField.endEditing(true)
+//        return true
+//    }
+//
+//
+//}

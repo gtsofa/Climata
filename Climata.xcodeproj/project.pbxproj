@@ -27,6 +27,8 @@
 		C60B934C2552FBB8007FC5FC /* PreviousLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934B2552FBB8007FC5FC /* PreviousLocationCell.swift */; };
 		C60B934E25532C6A007FC5FC /* CityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934D25532C69007FC5FC /* CityController.swift */; };
 		C60B9350255438D5007FC5FC /* FutureWeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B934F255438D5007FC5FC /* FutureWeatherController.swift */; };
+		C60B9352255457D1007FC5FC /* FutureDaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B9351255457D0007FC5FC /* FutureDaysCell.swift */; };
+		C60B935425546A56007FC5FC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B935325546A56007FC5FC /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		C60B934B2552FBB8007FC5FC /* PreviousLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLocationCell.swift; sourceTree = "<group>"; };
 		C60B934D25532C69007FC5FC /* CityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityController.swift; sourceTree = "<group>"; };
 		C60B934F255438D5007FC5FC /* FutureWeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureWeatherController.swift; sourceTree = "<group>"; };
+		C60B9351255457D0007FC5FC /* FutureDaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureDaysCell.swift; sourceTree = "<group>"; };
+		C60B935325546A56007FC5FC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 			children = (
 				C60B93452552C519007FC5FC /* MenuOptionCell.swift */,
 				C60B934B2552FBB8007FC5FC /* PreviousLocationCell.swift */,
+				C60B9351255457D0007FC5FC /* FutureDaysCell.swift */,
 			);
 			name = View;
 			path = "New Group";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C60B934325528813007FC5FC /* MenuOption.swift */,
+				C60B935325546A56007FC5FC /* WeatherManager.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -342,10 +348,12 @@
 				C60B934E25532C6A007FC5FC /* CityController.swift in Sources */,
 				C60B930625516443007FC5FC /* ViewController.swift in Sources */,
 				C60B93482552EFF1007FC5FC /* TestController.swift in Sources */,
+				C60B935425546A56007FC5FC /* WeatherManager.swift in Sources */,
 				C60B930225516443007FC5FC /* AppDelegate.swift in Sources */,
 				C60B9350255438D5007FC5FC /* FutureWeatherController.swift in Sources */,
 				C60B934425528813007FC5FC /* MenuOption.swift in Sources */,
 				C60B934225527BA8007FC5FC /* Protocols.swift in Sources */,
+				C60B9352255457D1007FC5FC /* FutureDaysCell.swift in Sources */,
 				C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */,
 				C60B933B25516842007FC5FC /* Extension.swift in Sources */,
 				C60B934A2552F897007FC5FC /* PreviousLocationController.swift in Sources */,

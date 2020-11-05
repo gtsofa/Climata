@@ -25,7 +25,7 @@ class FutureWeatherController: UIViewController {
     //MARK: - Handlers
     func setTableConstraints() {
         view.addSubview(locationsTableView)
-        locationsTableView.register(PreviousLocationCell.self, forCellReuseIdentifier: cellId)
+        locationsTableView.register(FutureDaysCell.self, forCellReuseIdentifier: cellId)
         locationsTableView.delegate = self
         locationsTableView.dataSource = self
         
@@ -46,15 +46,15 @@ extension FutureWeatherController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! PreviousLocationCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! FutureDaysCell
         cell.textLabel?.text = testArray[indexPath.row]//"Hello man"
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let newViewController = CityController()
-        self.navigationController?.pushViewController(newViewController, animated: true)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let newViewController = CityController()
+//        self.navigationController?.pushViewController(newViewController, animated: true)
+//    }
     
     
 }
