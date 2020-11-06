@@ -317,6 +317,8 @@ extension HomeController: WeatherManagerDelegate {
         print("home: \(weather.temperature)")
         DispatchQueue.main.async {
             self.temperatureLabel.text = "\(weather.temperatureString) C"
+            self.cityNameLabel.text = "\(weather.cityName)"
+            self.weatherIconImage.image = UIImage(systemName: weather.conditionName)
         }
     }
     
