@@ -30,6 +30,7 @@
 		C60B9352255457D1007FC5FC /* FutureDaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B9351255457D0007FC5FC /* FutureDaysCell.swift */; };
 		C60B935425546A56007FC5FC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B935325546A56007FC5FC /* WeatherManager.swift */; };
 		C65353D32554BB5700A58A0C /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65353D22554BB5700A58A0C /* WeatherData.swift */; };
+		C65353D52554C6E700A58A0C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65353D42554C6E700A58A0C /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		C60B9351255457D0007FC5FC /* FutureDaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureDaysCell.swift; sourceTree = "<group>"; };
 		C60B935325546A56007FC5FC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		C65353D22554BB5700A58A0C /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		C65353D42554C6E700A58A0C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				C60B934325528813007FC5FC /* MenuOption.swift */,
 				C60B935325546A56007FC5FC /* WeatherManager.swift */,
 				C65353D22554BB5700A58A0C /* WeatherData.swift */,
+				C65353D42554C6E700A58A0C /* WeatherModel.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -359,6 +362,7 @@
 				C60B934225527BA8007FC5FC /* Protocols.swift in Sources */,
 				C60B9352255457D1007FC5FC /* FutureDaysCell.swift in Sources */,
 				C60B930425516443007FC5FC /* SceneDelegate.swift in Sources */,
+				C65353D52554C6E700A58A0C /* WeatherModel.swift in Sources */,
 				C60B933B25516842007FC5FC /* Extension.swift in Sources */,
 				C60B934A2552F897007FC5FC /* PreviousLocationController.swift in Sources */,
 				C60B933E25527880007FC5FC /* ContainerController.swift in Sources */,
