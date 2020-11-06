@@ -319,6 +319,8 @@ extension HomeController: WeatherManagerDelegate {
             self.temperatureLabel.text = "\(weather.temperatureString) C"
             self.cityNameLabel.text = "\(weather.cityName)"
             self.weatherIconImage.image = UIImage(systemName: weather.conditionName)
+            self.humidityValueLabel.text = "\(weather.humidityString) %"
+            self.windValueLabel.text = "\(weather.windString) m/sec"
         }
     }
     

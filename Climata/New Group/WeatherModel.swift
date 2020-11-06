@@ -12,11 +12,22 @@ struct WeatherModel {
     let conditionId: Int
     let cityName: String
     let temperature: Double
+    let humidy: Double
+    let wind: Double
     
     //comp prop for temp as 1decimalplace
     var temperatureString: String {
         return String(format: "%.1f", temperature)
     }
+    
+    var humidityString: String {
+        return String(format: "%.1f", humidy)
+    }
+    
+    var windString: String {
+        return String(format: "%.1f", wind)
+    }
+    
     
     //computed property
     var conditionName: String {

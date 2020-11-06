@@ -52,8 +52,10 @@ struct WeatherManager {
             let id = decodedData.weather[0].id
             let temp = decodedData.main.temp
             let name = decodedData.name
+            let humidity = decodedData.main.humidity
+            let wind = decodedData.wind.speed
             
-            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
+            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, humidy: humidity, wind: wind)
             //getConditionName(weatherId: id)
             print(weather.conditionName)
             print(weather.temperatureString)
