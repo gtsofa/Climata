@@ -10,6 +10,85 @@ import UIKit
 
 class HomeController: UIViewController, UITextFieldDelegate{
     //MARK: - Properties
+    private lazy var cityNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Los Angeles"
+        label.font = .systemFont(ofSize: 30)
+        label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    private lazy var rainChanceLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Chance of Rain: 3%"
+        label.font = .systemFont(ofSize: 12)
+        label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    
+    private lazy var temperatureLabel: UILabel = {
+        let label = UILabel()
+        label.text = "19 C"
+        label.font = .systemFont(ofSize: 33)
+        label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    
+    private lazy var windLabel: UILabel = {
+        let label = UILabel()
+        label.text = "wind"
+        label.font = .systemFont(ofSize: 10)
+        //label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    private lazy var windValueLabel: UILabel = {
+        let label = UILabel()
+        label.text = "9 km/h"
+        label.font = .boldSystemFont(ofSize: 12)
+        //label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    
+    private lazy var humidityChanceLabel: UILabel = {
+        let label = UILabel()
+        label.text = "humidity"
+        label.font = .systemFont(ofSize: 10)
+        //label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    
+    private lazy var humidityValueLabel: UILabel = {
+        let label = UILabel()
+        label.text = "78%"
+        label.font = .boldSystemFont(ofSize: 12)
+        //label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    
+    let weatherIconImageView: UIImageView = {
+        let icon = UIImageView()
+        icon.contentMode = .scaleAspectFit
+        icon.clipsToBounds = true
+        //icon.backgroundColor = .blue
+        return icon
+    }()
+    
+    private let weatherIconImage: UIImageView = {
+        let saveImageView = UIImageView()
+        saveImageView.image = UIImage(named: "weather-icon")
+        saveImageView.heightAnchor.constraint(equalToConstant: 60).isActive = true//40
+        saveImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true//60
+        //saveImageView.backgroundColor = .darkGray
+        //saveImageView.layer.cornerRadius = 45
+        return saveImageView
+        
+    }()
     private lazy var searchTextField: UITextField = {
         let mobile = UITextField()
         mobile.placeholder = "Search location"
@@ -33,9 +112,8 @@ class HomeController: UIViewController, UITextFieldDelegate{
     
     let todayWeatherVC = TodayWeatherController()
     
-    //todo
     weak var conditionImageView: UIImageView!
-    weak var temperatureLabel: UILabel!
+    //weak var temperatureLabel: UILabel!
     weak var cityLabel: UILabel!
     //weak var searchTextField: UITextField!
     
@@ -51,9 +129,12 @@ class HomeController: UIViewController, UITextFieldDelegate{
         configureSearchBar()
         addSegmentedControl()
         previousLocationChild()
-        todayWeatherChild()
+        //todayWeatherChild()
         searchTextField.delegate = self
         weatherManager.delegate = self
+        
+        //configureUI()
+        setConstraints()
 
     }
     //MARK: - Selectors
@@ -84,6 +165,36 @@ class HomeController: UIViewController, UITextFieldDelegate{
         
     }
     //MARK: - Handlers
+    func configureUI() {
+        view.addSubview(temperatureLabel)
+        temperatureLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 80, paddingLeft: 16, paddingRight: 16)
+    }
+    func setConstraints() {
+        let stack = UIStackView(arrangedSubviews: [cityNameLabel, rainChanceLabel])
+        stack.axis = .vertical
+        stack.spacing = 0
+        stack.distribution = .fillEqually
+        view.addSubview(stack)
+        stack.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 70, paddingLeft: 16, paddingRight: 16)
+        view.addSubview(weatherIconImage)
+        weatherIconImage.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 140, paddingLeft: 100, paddingRight: 210)
+        view.addSubview(temperatureLabel)
+        temperatureLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 140, paddingLeft: 180, paddingRight: 80)
+        
+        let windstack = UIStackView(arrangedSubviews: [windLabel, windValueLabel])
+        windstack.axis = .vertical
+        windstack.spacing = 10
+        windstack.distribution = .fillEqually
+        view.addSubview(windstack)
+        windstack.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 220, paddingLeft: 32, paddingRight: 16)
+        
+        let humiditystack = UIStackView(arrangedSubviews: [humidityChanceLabel, humidityValueLabel])
+        humiditystack.axis = .vertical
+        humiditystack.spacing = 10
+        humiditystack.distribution = .fillEqually
+        view.addSubview(humiditystack)
+        humiditystack.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 220, paddingLeft: 280, paddingRight: 16)
+    }
     func configureNavigationBar() {
         assignbackground()
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
@@ -205,7 +316,7 @@ extension HomeController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         print("home: \(weather.temperature)")
         DispatchQueue.main.async {
-            //self.temperatureLabel.text = weather.temperatureString
+            self.temperatureLabel.text = "\(weather.temperatureString) C"
         }
     }
     

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct WeatherManager {
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=62470095f3709929d14ddc5b0e009a0a"
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=62470095f3709929d14ddc5b0e009a0a&units=metric"
     
     var delegate: WeatherManagerDelegate?
     
