@@ -31,6 +31,7 @@
 		C60B935425546A56007FC5FC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B935325546A56007FC5FC /* WeatherManager.swift */; };
 		C65353D32554BB5700A58A0C /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65353D22554BB5700A58A0C /* WeatherData.swift */; };
 		C65353D52554C6E700A58A0C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65353D42554C6E700A58A0C /* WeatherModel.swift */; };
+		C65353D725551BCD00A58A0C /* TodayWeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65353D625551BCD00A58A0C /* TodayWeatherController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		C60B935325546A56007FC5FC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		C65353D22554BB5700A58A0C /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		C65353D42554C6E700A58A0C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		C65353D625551BCD00A58A0C /* TodayWeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				C60B93492552F896007FC5FC /* PreviousLocationController.swift */,
 				C60B934D25532C69007FC5FC /* CityController.swift */,
 				C60B934F255438D5007FC5FC /* FutureWeatherController.swift */,
+				C65353D625551BCD00A58A0C /* TodayWeatherController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				C60B935425546A56007FC5FC /* WeatherManager.swift in Sources */,
 				C60B930225516443007FC5FC /* AppDelegate.swift in Sources */,
 				C60B9350255438D5007FC5FC /* FutureWeatherController.swift in Sources */,
+				C65353D725551BCD00A58A0C /* TodayWeatherController.swift in Sources */,
 				C60B934425528813007FC5FC /* MenuOption.swift in Sources */,
 				C60B934225527BA8007FC5FC /* Protocols.swift in Sources */,
 				C60B9352255457D1007FC5FC /* FutureDaysCell.swift in Sources */,

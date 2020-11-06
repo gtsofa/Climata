@@ -11,3 +11,8 @@ import UIKit
 protocol HomeControllerDelegate: class {
     func handleMenuToggle(forMenuOption menuOption: MenuOption?)
 }
+
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailWithError(error: Error)
+}
