@@ -17,26 +17,36 @@ class PreviousLocationCell: UITableViewCell {
         return icon
     }()
     
-    let descriptionLabel: UILabel = {
+    let cityNameLabel: UILabel = {
         let label = UILabel()
-        //label.text = "Sample location"
-        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 16)
         return label
     }()
+    
+    let temperatureLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 16)
+        return label
+    }()
+    
+    var weather: WeatherModel! {
+        didSet {
+            cityNameLabel.text = weather.cityName
+            temperatureLabel.text = weather.temperatureString
+        }
+    }
     //MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(menuIconImageView)
-        addSubview(descriptionLabel)
-        menuIconImageView.translatesAutoresizingMaskIntoConstraints = false
-        menuIconImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        menuIconImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 12).isActive = true
-        menuIconImageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
-        menuIconImageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
-        descriptionLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        descriptionLabel.leftAnchor.constraint(equalTo: menuIconImageView.rightAnchor, constant: 12).isActive = true
+        backgroundColor = .clear
+        
+        addSubview(cityNameLabel)
+        addSubview(temperatureLabel)
+        cityNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        cityNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        cityNameLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 12).isActive = true
     }
     
     required init?(coder: NSCoder) {

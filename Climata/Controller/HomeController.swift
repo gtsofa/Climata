@@ -120,6 +120,15 @@ class HomeController: UIViewController, UITextFieldDelegate{
     
     var weatherManager = WeatherManager()
     
+    //var testArray: [WeatherData] = [WeatherData]()
+    
+    //var testArray = [WeatherModel]()
+    //var testArray: WeatherModel?
+    var testArray: [String] = []
+    
+    fileprivate let cellId = "previous table cell"
+    let locationsTableView = UITableView()
+    
 
     //MARK: - Initializers
     override func viewDidLoad() {
@@ -127,8 +136,9 @@ class HomeController: UIViewController, UITextFieldDelegate{
         configureNavigationBar()
         //setupSearchBar()
         configureSearchBar()
-        addSegmentedControl()
-        previousLocationChild()
+        //addSegmentedControl()
+        //previousLocationChild()
+        locationsTableViewConstraints()
         //todayWeatherChild()
         searchTextField.delegate = self
         weatherManager.delegate = self
@@ -150,6 +160,7 @@ class HomeController: UIViewController, UITextFieldDelegate{
     
     @objc func addTapped() {
         searchTextField.endEditing(true)
+        
     }
     
     @objc func tapSegmented(_ segmentedControl: UISegmentedControl) {
@@ -165,6 +176,21 @@ class HomeController: UIViewController, UITextFieldDelegate{
         
     }
     //MARK: - Handlers
+    func locationsTableViewConstraints() {
+        print("locations constraints...")
+        view.addSubview(locationsTableView)
+        locationsTableView.register(PreviousLocationCell.self, forCellReuseIdentifier: cellId)
+        locationsTableView.delegate = self
+        locationsTableView.dataSource = self
+        locationsTableView.backgroundColor = .clear
+        
+        //locationsTableView.backgroundColor = .red
+        locationsTableView.translatesAutoresizingMaskIntoConstraints = false
+        locationsTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 300).isActive = true
+        locationsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        locationsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        locationsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    }
     func configureUI() {
         view.addSubview(temperatureLabel)
         temperatureLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 80, paddingLeft: 16, paddingRight: 16)
@@ -269,7 +295,7 @@ class HomeController: UIViewController, UITextFieldDelegate{
         
         previousLocationVC.view.layer.cornerRadius = 25
         previousLocationVC.view.layer.masksToBounds = true
-        previousLocationVC.view.backgroundColor = .white
+        //previousLocationVC.view.backgroundColor = .red
     }
   
     func assignbackground(){
@@ -295,6 +321,7 @@ class HomeController: UIViewController, UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.endEditing(true)
+        //testArray.
         return true
     }
     
@@ -314,6 +341,7 @@ class HomeController: UIViewController, UITextFieldDelegate{
 extension HomeController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+        
         print("home: \(weather.temperature)")
         DispatchQueue.main.async {
             self.temperatureLabel.text = "\(weather.temperatureString) C"
@@ -321,13 +349,39 @@ extension HomeController: WeatherManagerDelegate {
             self.weatherIconImage.image = UIImage(systemName: weather.conditionName)
             self.humidityValueLabel.text = "\(weather.humidityString) %"
             self.windValueLabel.text = "\(weather.windString) m/sec"
+            
+            
+            let location = weather.cityName
+            self.testArray.append(location)
+            self.locationsTableView.reloadData()
         }
     }
     
     func didFailWithError(error: Error) {
         print(error)
     }
-    
 
+}
+
+//MARK: - TableView Delegates & DataSource
+extension HomeController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return testArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! PreviousLocationCell
+        cell.textLabel?.text = testArray[indexPath.row]//"Hello man"
+        //let weatherList = testArray[indexPath.row]
+        //cell.textLabel?.text = weatherList.cityName
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let newViewController = CityController()
+        self.navigationController?.pushViewController(newViewController, animated: true)
+    }
+    
+    
 }
 
