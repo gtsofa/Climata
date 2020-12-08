@@ -91,9 +91,12 @@ class HomeController: UIViewController, UITextFieldDelegate{
     }()
     private lazy var searchTextField: UITextField = {
         let mobile = UITextField()
-        mobile.placeholder = "Search location"
+        mobile.attributedPlaceholder = NSAttributedString(string: "Search location",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         mobile.setLeftPaddingPoints(10)
-        mobile.backgroundColor = .white
+        mobile.textColor = .white
+        mobile.layer.borderColor = UIColor.lightGray.cgColor
+        mobile.layer.borderWidth = 0.5
         mobile.layer.cornerRadius = 10
         mobile.heightAnchor.constraint(equalToConstant: 30).isActive = true
         return mobile
@@ -119,11 +122,7 @@ class HomeController: UIViewController, UITextFieldDelegate{
     
     
     var weatherManager = WeatherManager()
-    
-    //var testArray: [WeatherData] = [WeatherData]()
-    
-    //var testArray = [WeatherModel]()
-    //var testArray: WeatherModel?
+
     var testArray: [String] = []
     
     fileprivate let cellId = "previous table cell"
@@ -133,9 +132,10 @@ class HomeController: UIViewController, UITextFieldDelegate{
     //MARK: - Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
+        configureNavigationBar() //REPLACE with tab bar
         //setupSearchBar()
-        configureSearchBar()
+        //configureSearchBar()
+        self.navigationController?.isNavigationBarHidden = true
         //addSegmentedControl()
         //previousLocationChild()
         locationsTableViewConstraints()
@@ -196,6 +196,9 @@ class HomeController: UIViewController, UITextFieldDelegate{
         temperatureLabel.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 80, paddingLeft: 16, paddingRight: 16)
     }
     func setConstraints() {
+        view.addSubview(searchTextField)
+        searchTextField.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 16, paddingRight: 16)
+        
         let stack = UIStackView(arrangedSubviews: [cityNameLabel, rainChanceLabel])
         stack.axis = .vertical
         stack.spacing = 0
@@ -223,9 +226,9 @@ class HomeController: UIViewController, UITextFieldDelegate{
     }
     func configureNavigationBar() {
         assignbackground()
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+       // navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         //title = "CLIMATA"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu-icon-1").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu-icon-1").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
     }
     
     @objc func configureSearchBar() {
@@ -380,6 +383,11 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let newViewController = CityController()
         self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        
+        /*let vc = CityController()//PizzaModalProgViewController()
+        vc.modalTransitionStyle = .partialCurl
+        present(vc, animated: true, completion: nil)*/
     }
     
     

@@ -100,6 +100,7 @@ class CityController: UIViewController {
         setConstraints()
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         assignbackground()
+        //navigationController?.isNavigationBarHidden = false
         
         fivedaysWeatherChild()
         

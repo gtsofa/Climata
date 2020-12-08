@@ -21,6 +21,7 @@ class PreviousLocationCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 16)
+        label.textColor = .white
         return label
     }()
     
@@ -41,6 +42,7 @@ class PreviousLocationCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
+        
         
         addSubview(cityNameLabel)
         addSubview(temperatureLabel)
